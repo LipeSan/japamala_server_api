@@ -1,0 +1,11 @@
+{
+    "error_400": "There is error on Server, try again later!",
+    "error_401": "No token provided!",
+    "error_401_token": "Token Error!",
+    "error_401_scheme": "Token malformatted!",
+    "error_user_exit": "User already exists!",
+    "error_not_found": "User not found!",
+    "error_invalid_password": "Invalid password!",
+    "error_forgot_password": "Error on forgot password, try again!",
+    "error_token_expired": "Token expired, you need to generate a new one!"
+}
