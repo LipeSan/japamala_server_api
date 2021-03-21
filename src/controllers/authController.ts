@@ -14,7 +14,7 @@ const register = async (user:User) => {
         }).catch(error => {
             Firebase.admin.auth().createUser(user).then(async data => {
                 if(!data){
-                    resolve({success: false, message:'', data: null});
+                        resolve({success: false, message:'', data: null});
                 }
                 let userInfo:any = data.providerData[0];
                 userInfo.token = await Firebase.admin.auth().createCustomToken(data.uid);
