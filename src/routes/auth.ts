@@ -21,7 +21,7 @@ router.post('/register', async(res, req) => {
 //Authenticate
 router.post('/authenticate', async (res, req) => {
     const result = await Auth.authenticate(res.body);
-    req.send(result);
+     req.send(result);
 })
 
 module.exports = (app:any) => app.use('/auth', router);
