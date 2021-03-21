@@ -7,5 +7,8 @@
     "error_not_found": "User not found!",
     "error_invalid_password": "Invalid password!",
     "error_forgot_password": "Error on forgot password, try again!",
-    "error_token_expired": "Token expired, you need to generate a new one!"
+    "error_token_expired": "Token expired, you need to generate a new one!",
+
+    "success_register": "Register was done success!",
+    "success_login": "Login was done success!"
 }
