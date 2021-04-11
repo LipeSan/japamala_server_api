@@ -1,14 +1,18 @@
 export interface User {
     email: string,
     emailVerified: boolean,
-    //phoneNumber: string,
     password: string,
-    displayName: string,
     photoURL: string,
     disabled: boolean,
+    firstName:string,
+    lastName: string
 } 
 
 export interface Auth {
     email:string,
     password: string
+}
+
+export interface Feed {
+    message:string
 }
