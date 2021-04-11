@@ -39,11 +39,10 @@ const authenticate = (auth: Auth) => {
     return new Promise (async (resolve) => {
         await Firebase.firebase.auth().signInWithEmailAndPassword(auth.email, auth.password).then( async (UserCredencial) => {
             if(!UserCredencial.user) resolve({success: false, message: MessageError.notFound, data:null});
+            console.log("DATA-1",UserCredencial.user);
             const user:any = UserCredencial.user?.providerData;
             user.token = UserCredencial.user?.getIdToken();
-            console.log(user.token);
-            
-            resolve({success:true, message: MessageSuccess.login, data:user});
+            resolve({success:true, message: MessageSuccess.login, data:UserCredencial.user});
         }).catch(error => {
             resolve({success:false, message:error.message ? error.message : MessageError.defaultError, data:error});
         })
